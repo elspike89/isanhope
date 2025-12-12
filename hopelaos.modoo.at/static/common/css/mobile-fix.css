@@ -1,0 +1,81 @@
+/* ---------------------------------------
+   ?? Mobile Force Responsive Patch
+   --------------------------------------- */
+@media (max-width: 900px) {
+
+    /* 고정폭 제거 */
+    html, body, #wrap, .main, .section_header,
+    .area_inner, .uio_content, .content_body,
+    .fc_content, .fcdeck_container, .main_area {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 내부 컨테이너 패딩 */
+    .area_inner, .content_body, .uio_content {
+        padding: 0 12px !important;
+    }
+
+    /* 텍스트/헤더 정렬 */
+    .section_header .area_inner {
+        padding-top: 16px !important;
+        padding-bottom: 16px !important;
+    }
+
+    /* 이미지 반응형 */
+    img, .thumb_area img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* 갤러리 li 정렬 */
+    .list_gallery > li {
+        width: 100% !important;
+        display: block !important;
+        padding: 0 !important;
+        margin-bottom: 18px !important;
+    }
+
+    /* 갤러리 내부 요소 같은 줄 정렬 방지 */
+    .list_gallery a.thumb_area {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    /* type_right / type_left 고정 레이아웃 제거 */
+    .type_right, .type_left {
+        display: block !important;
+        float: none !important;
+    }
+
+    /* 텍스트 영역 */
+    .txt_area {
+        padding: 8px 0 !important;
+        width: 100% !important;
+    }
+
+    /* 비정상 크기 요소 강제 줄이기 */
+    [style*="width:980px"], 
+    [style*="min-width:980px"],
+    [style*="min-width: 980px"],
+    [style*="max-width:980px"] {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* 메뉴(네비게이션) 영역 */
+    #mainHeader, ._navigationWrap, ._gnbMenuList {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+    }
+
+    /* long horizontal menu scroll 스타일 */
+    ._gnbMenuLine {
+        white-space: nowrap !important;
+    }
+}
