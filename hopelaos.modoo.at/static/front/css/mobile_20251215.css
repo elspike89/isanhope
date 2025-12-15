@@ -1,82 +1,86 @@
-﻿/* =====================
-   모바일 공통 리셋
-===================== */
-body {
-    min-width: auto !important;
-}
+﻿/* =====================================
+   MOBILE FINAL FIX (NO HORIZONTAL SCROLL)
+   ===================================== */
+@media (max-width: 768px) {
 
-/* 전체 폭을 화면에 맞춤 */
-.area_inner,
-.main,
-.maincard,
-.uio_content {
+  /* 🔥 1. 문서 전체 가로 스크롤 차단 */
+  html,
+  body {
     width: 100% !important;
     max-width: 100% !important;
-}
+    min-width: 0 !important;
+    overflow-x: hidden !important;
+  }
 
-/* 좌우 여백 제거 */
-.area_inner {
-    padding: 0 12px !important;
-}
-
-/* =====================
-   상단 메뉴 모바일 대응
-===================== */
-.section_header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.section_header .area_inner {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/* 메뉴 줄바꿈 */
-.section_header a {
-    font-size: 14px;
-    padding: 8px 6px;
-}
-
-/* =====================
-   이미지 갤러리 모바일 대응
-===================== */
-.list_gallery li {
-    display: block !important;
-}
-
-/* 갤러리 이미지를 한 줄씩 */
-.list_gallery a.thumb_area {
+  /* 🔥 2. modoo 핵심 래퍼들 */
+  #wrap,
+  ._fcWrap,
+  .area_inner,
+  .container,
+  .content,
+  ._content_body,
+  .section_header {
     width: 100% !important;
-    display: block;
-    margin-bottom: 8px;
-}
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
 
-.list_gallery img {
+  /* 🔥 3. ul / ol 기본 패딩 제거 (가장 큰 원인) */
+  ul,
+  ol {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  /* 🔥 4. 갤러리 전체 폭 고정 */
+  .list_gallery {
     width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .list_gallery > li {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  /* 🔥 5. float / position 잔재 제거 */
+  .thumb_area,
+  .thumb_area * {
+    float: none !important;
+  }
+
+  .type_left,
+  .type_right,
+  .list_gallery * {
+    position: relative !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  /* 🔥 6. 이미지가 부모 밖으로 못 나가게 */
+  img {
+    max-width: 100% !important;
     height: auto !important;
+    display: block;
+  }
+
+  /* 🔥 7. 더보기 버튼 */
+  .uio_btn_more {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  /* 🔥 8. 혹시 남아있는 min-width 강제 요소 차단 (보험) */
+  [style*="min-width"] {
+    min-width: 0 !important;
+  }
+
 }
-
-/* =====================
-   카드 / 컨텐츠 박스
-===================== */
-.uio_box {
-    margin-bottom: 20px;
-}
-
-/* 글자 크기 조정 */
-body, p, div {
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-
-
-body.is-mobile #wrap,
-body.is-mobile ._fcWrap {
-  width: 100% !important;
-  min-width: 0 !important;
-}
-
-
