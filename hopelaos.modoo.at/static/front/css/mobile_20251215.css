@@ -213,3 +213,48 @@
     cursor: default;
   }
 }
+
+/* ===============================
+   모바일 푸터 정렬 & 텍스트 깨짐 해결
+   =============================== */
+@media (max-width: 768px) {
+
+  /* 푸터 전체 래퍼 */
+  footer,
+  .section_footer,
+  .footer,
+  .footer_area {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 푸터 내부 중앙 고정 해제 */
+  footer .area_inner,
+  .section_footer .area_inner {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    box-sizing: border-box;
+  }
+
+  /* 푸터 텍스트 줄바꿈 강제 */
+  footer *,
+  .section_footer * {
+    white-space: normal !important;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  /* 주소 / 사업자 정보 계열 (modoo 특화) */
+  .footer_address,
+  .footer_info,
+  .footer_company,
+  .footer_text {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+}
