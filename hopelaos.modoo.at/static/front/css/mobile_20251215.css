@@ -92,6 +92,9 @@
     display: none !important;
   }
 
+  .area_global {
+    right: 20px !important;
+  }
 }
 
 
@@ -257,4 +260,37 @@
     line-height: 1.5;
   }
 
+  .footer_inner {
+    margin-left: 10px;
+  }
+}
+
+
+/* =========================
+   kku-korean, kku-korean2 전용 더보기 버튼
+========================= */
+
+.one-month_btn_more, .volunteer_btn_more,
+.covid_btn_more, .kkt-btn_more, .lunch_btn_more, .kku_btn_more, .kku2_btn_more {
+  width: 140px;              /* index 느낌 */
+  margin: 24px auto 32px;    /* 중앙 하단 */
+  padding: 10px 0;
+
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+
+  color: #333;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+
+  display: block;
+  box-sizing: border-box;
+}
+
+/* 터치 피드백 */
+.korean-edu_btn_more:active, .culture_btn_more:active, .one-month_btn_more:active, .volunteer_btn_more:active
+.covid_btn_more:active, .kkt-btn_more:active, .lunch_btn_more:active, .kku_btn_more:active, .kku2_btn_more:active {
+  background: #f3f3f3;
 }
